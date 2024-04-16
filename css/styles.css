@@ -24,7 +24,8 @@ body {
 
 .form-group {
   margin-bottom: 20px;
-  margin-right: 20px;
+  margin-right: auto; /* Замінено на автоматичний відступ справа */
+  margin-left: auto; /* Замінено на автоматичний відступ зліва */
 }
 
 .form-group label {
@@ -66,6 +67,7 @@ button:hover {
   text-decoration: none;
   color: white;
 }
+
 /* Responsive*/
 @media screen and (max-width: 500px) {
   .container {
@@ -79,5 +81,18 @@ button:hover {
 
   .form-group input {
       margin-right: 0;
+  }
+}
+
+/* Responsive for screens wider than 650px */
+@media screen and (min-width: 651px) {
+  .form-group {
+    width: 550px; /* Змінено ширину .form-group */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-group input {
+    width: 100%; /* Змінено ширину .form-group input */
   }
 }
