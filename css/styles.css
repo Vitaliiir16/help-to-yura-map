@@ -1,98 +1,83 @@
-body {
-  font-family: Arial, sans-serif;
+/* styles.css */
+
+/* Reset styles */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
 }
 
 .container {
-  max-width: 100%;
-  margin: 20px auto;
-  padding: 10px;
+  max-width: 400px;
+  margin: 50px auto;
   background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .registration-form {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .registration-form h2 {
+  text-align: center;
   margin-bottom: 20px;
+  color: #007bff;
 }
 
 .form-group {
-  margin-bottom: 20px;
-  margin-right: auto; /* Замінено на автоматичний відступ справа */
-  margin-left: auto; /* Замінено на автоматичний відступ зліва */
+  margin-bottom: 25px;
 }
 
 .form-group label {
-  display: block;
-  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
 }
 
 .form-group input {
-  width: calc(100% - 20px);
-  padding: 10px;
-  border: 1px solid #ccc;
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
   border-radius: 5px;
-  margin-right: 50px;
+  transition: border-color 0.3s ease;
 }
 
-button {
-  display: inline-block;
-  padding: 10px 20px;
+.form-group input:focus {
+  border-color: #007bff;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
   background-color: #007bff;
-  color: #fff;
   border: none;
+  color: #fff;
+  font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
+button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
 .skip {
-  font-size: 0.8em;
-  display: inline-block;
-  padding: 10px 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  text-align: center;
   text-decoration: none;
-  color: white;
+  color: #007bff;
+  display: block;
+  margin-top: 15px;
+  font-size: 16px;
 }
 
-/* Responsive*/
-@media screen and (max-width: 500px) {
-  .container {
-      margin: 20px auto;
-      padding: 10px;
-  }
-
-  .form-group {
-      margin-right: 0;
-  }
-
-  .form-group input {
-      margin-right: 0;
-  }
-}
-
-/* Responsive for screens wider than 650px */
-@media screen and (min-width: 651px) {
-  .form-group {
-    width: 550px; /* Змінено ширину .form-group */
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .form-group input {
-    width: 100%; /* Змінено ширину .form-group input */
-  }
+.skip:hover {
+  text-decoration: underline;
 }
